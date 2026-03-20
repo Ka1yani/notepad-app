@@ -430,3 +430,438 @@ body {
   background: #d0d0d8;
   border-radius: 3px;
 }
+
+/* ── RESPONSIVE DESIGN ── */
+
+/* Tablet and Small Laptops (max 1024px) */
+@media (max-width: 1024px) {
+  #sidebar {
+    width: 280px;
+    min-width: 280px;
+  }
+
+  #editor-content {
+    padding: 24px 32px;
+    max-width: 100%;
+  }
+}
+
+/* Tablets and Large Phones (768px - 1024px) */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  #sidebar {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    max-height: 45vh;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  #editor-pane {
+    height: auto;
+    flex: 1;
+  }
+
+  #notes-list {
+    max-height: 250px;
+  }
+
+  #sidebar-header {
+    padding: 16px 12px;
+  }
+
+  #sidebar-header h1 {
+    font-size: 16px;
+  }
+
+  #btn-new {
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+  }
+
+  #search-wrap {
+    padding: 8px;
+  }
+
+  #search {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .note-item {
+    padding: 8px 10px;
+    margin-bottom: 2px;
+  }
+
+  .note-item-title {
+    font-size: 13px;
+  }
+
+  .note-item-preview {
+    font-size: 11px;
+  }
+
+  .note-item-date {
+    font-size: 10px;
+  }
+
+  .note-item-delete {
+    font-size: 14px;
+    padding: 3px 4px;
+  }
+
+  #editor-toolbar {
+    padding: 10px 16px;
+    min-height: 48px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  #editor-meta {
+    font-size: 11px;
+    flex-basis: 100%;
+    order: 3;
+  }
+
+  #btn-delete {
+    padding: 6px 12px;
+    font-size: 12px;
+    order: 2;
+  }
+
+  #editor-content {
+    padding: 20px 16px;
+    max-width: 100%;
+  }
+
+  #note-title {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  #note-body {
+    font-size: 14px;
+    min-height: 250px;
+  }
+
+  #empty-editor {
+    padding: 24px;
+  }
+
+  #empty-editor svg {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+  }
+
+  #empty-editor h2 {
+    font-size: 18px;
+  }
+
+  #empty-editor p {
+    font-size: 13px;
+    max-width: 280px;
+  }
+
+  #empty-editor button {
+    margin-top: 16px;
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  #sidebar-footer {
+    padding: 10px;
+    gap: 6px;
+  }
+
+  .btn-footer {
+    padding: 8px 0;
+    font-size: 12px;
+  }
+
+  #empty-list {
+    padding: 24px 16px;
+    font-size: 13px;
+  }
+
+  #empty-list svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  #modal {
+    width: 90%;
+    max-width: 320px;
+    padding: 24px;
+  }
+
+  #modal h3 {
+    font-size: 16px;
+  }
+
+  #modal p {
+    font-size: 13px;
+  }
+}
+
+/* Mobile Phones (max 480px) */
+@media (max-width: 480px) {
+  body {
+    flex-direction: column;
+  }
+
+  #sidebar {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    max-height: 40vh;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    order: 2;
+  }
+
+  #editor-pane {
+    height: auto;
+    flex: 1;
+    order: 1;
+    min-height: 60vh;
+  }
+
+  #sidebar-header {
+    padding: 12px 10px;
+  }
+
+  #sidebar-header h1 {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  #btn-new {
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+  }
+
+  #search-wrap {
+    padding: 6px;
+  }
+
+  #search {
+    padding: 5px 8px;
+    font-size: 11px;
+    border-radius: 6px;
+  }
+
+  #notes-list {
+    max-height: 200px;
+    padding: 4px;
+  }
+
+  .note-item {
+    padding: 6px 8px;
+    margin-bottom: 2px;
+    gap: 6px;
+  }
+
+  .note-item-title {
+    font-size: 12px;
+    margin-right: 4px;
+  }
+
+  .note-item-preview {
+    font-size: 10px;
+  }
+
+  .note-item-date {
+    font-size: 9px;
+  }
+
+  .note-item-delete {
+    font-size: 13px;
+    padding: 2px 3px;
+    min-width: 20px;
+    min-height: 20px;
+  }
+
+  #editor-toolbar {
+    padding: 8px 12px;
+    min-height: 44px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  #editor-meta {
+    font-size: 10px;
+    flex-basis: 100%;
+    order: 3;
+    gap: 6px;
+  }
+
+  #btn-delete {
+    padding: 5px 10px;
+    font-size: 11px;
+    order: 2;
+    gap: 4px;
+  }
+
+  #btn-delete svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  #editor-content {
+    padding: 16px 12px;
+    max-width: 100%;
+  }
+
+  #note-title {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  #note-title::placeholder {
+    font-size: 18px;
+  }
+
+  #note-body {
+    font-size: 13px;
+    line-height: 1.6;
+    min-height: 200px;
+  }
+
+  #note-body::placeholder {
+    font-size: 12px;
+  }
+
+  #empty-editor {
+    padding: 16px 12px;
+  }
+
+  #empty-editor svg {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
+  }
+
+  #empty-editor h2 {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  #empty-editor p {
+    font-size: 12px;
+    max-width: 100%;
+    line-height: 1.5;
+  }
+
+  #empty-editor button {
+    margin-top: 12px;
+    padding: 9px 18px;
+    font-size: 12px;
+    min-height: 40px;
+  }
+
+  #sidebar-footer {
+    padding: 8px;
+    gap: 4px;
+  }
+
+  .btn-footer {
+    padding: 7px 0;
+    font-size: 11px;
+    gap: 4px;
+  }
+
+  .btn-footer svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  #empty-list {
+    padding: 16px 12px;
+    font-size: 12px;
+  }
+
+  #empty-list svg {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 8px;
+  }
+
+  #empty-list p {
+    line-height: 1.4;
+  }
+
+  #modal {
+    width: 88%;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  #modal h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  #modal p {
+    font-size: 12px;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+
+  #modal-actions {
+    gap: 8px;
+  }
+
+  .btn-cancel,
+  .btn-confirm-delete {
+    padding: 8px;
+    font-size: 12px;
+    min-height: 36px;
+    border-radius: 6px;
+  }
+}
+
+/* Extra Small Phones (max 360px) */
+@media (max-width: 360px) {
+  #sidebar-header h1 {
+    font-size: 12px;
+  }
+
+  #btn-new {
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+  }
+
+  #note-title {
+    font-size: 18px;
+  }
+
+  #editor-content {
+    padding: 12px 10px;
+  }
+
+  #notes-list {
+    max-height: 180px;
+  }
+
+  .note-item {
+    padding: 5px 6px;
+  }
+
+  #editor-toolbar {
+    padding: 6px 10px;
+  }
+
+  #modal {
+    width: 92%;
+    padding: 16px;
+  }
+}
