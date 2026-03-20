@@ -79,10 +79,19 @@ function renderList() {
     div.className = 'note-item' + (note.id === activeId ? ' active' : '');
     div.dataset.id = note.id;
     div.innerHTML =
-      '<div class="note-item-title">' + (esc(note.title) || 'Untitled') + '</div>' +
-      '<div class="note-item-preview">' + (esc(note.content.split('\n')[0]) || 'No content') + '</div>' +
-      '<div class="note-item-date">' + formatDate(note.updated_at) + '</div>';
+      '<div class="note-item-content">' +
+        '<div class="note-item-title">' + (esc(note.title) || 'Untitled') + '</div>' +
+        '<div class="note-item-preview">' + (esc(note.content.split('\n')[0]) || 'No content') + '</div>' +
+        '<div class="note-item-date">' + formatDate(note.updated_at) + '</div>' +
+      '</div>' +
+      '<button class="note-item-delete" title="Delete note" aria-label="Delete note">🗑️</button>';
     div.addEventListener('click', function () { selectNote(note.id); });
+    const deleteBtn = div.querySelector('.note-item-delete');
+    deleteBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      selectNote(note.id);
+      openDeleteModal();
+    });
     notesList.appendChild(div);
   });
 }

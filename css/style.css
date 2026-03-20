@@ -101,6 +101,10 @@ body {
 }
 
 .note-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
   padding: 10px 12px;
   border-radius: var(--radius);
   cursor: pointer;
@@ -116,6 +120,34 @@ body {
   background: var(--active-note);
 }
 
+.note-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.note-item-delete {
+  opacity: 1;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  color: var(--danger);
+  transition: opacity 0.15s, background 0.1s;
+  flex-shrink: 0;
+}
+
+.note-item:hover .note-item-delete {
+  opacity: 1;
+  background: var(--danger-bg);
+}
+
+.note-item-delete:hover {
+  background: var(--danger-bg);
+  transform: scale(1.1);
+}
+
 .note-item-title {
   font-size: 14px;
   font-weight: 600;
@@ -123,6 +155,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   color: var(--text);
+  margin-right: 8px;
 }
 
 .note-item-preview {
